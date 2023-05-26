@@ -1,0 +1,75 @@
+.container {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(to bottom, #d4f4e7, #ffffff);
+  overflow: hidden;
+}
+
+.computer-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.computer-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.menu-button {
+  display: inline-block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.menu-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.menu-button span {
+  display: none;
+}
+
+.menu-button:hover span {
+  display: inline;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  background-color: white;
+}
+
+footer p {
+  font-size: 12px;
+  color: gray;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #d4f4e7, #ffffff);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+body {
+  background-image: url('/page2/assets/images/computer.png');
+  background-repeat: no-repeat;
+  background-size: 640px 480px;
+  /* 기타 스타일 속성들 */
+}
