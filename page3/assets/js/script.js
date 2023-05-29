@@ -1,7 +1,7 @@
 // menu-icons의 모든 이미지 요소를 선택합니다.
 const menuIcons = document.querySelectorAll('.menu-icons img')
 function goToHomePage() {
-  window.location.href = 'index.html'
+  window.location.href = 'page3/index.html'
 }
 
 // 각 이미지 요소에 마우스 이벤트 리스너를 등록합니다.
