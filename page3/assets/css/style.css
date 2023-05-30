@@ -55,7 +55,7 @@
     width: 100%;
   }
   .background {
-    position: absolute;
+    position: center top;
     background-size: contain;
     background-position: center top;
   }
