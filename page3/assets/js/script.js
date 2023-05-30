@@ -31,7 +31,6 @@ menuIcons.forEach((icon) => {
     }
   });
 });
-
 window.onload = function () {
   const titleElement = document.getElementById('title');
   const descriptionElement = document.getElementById('description');
@@ -66,10 +65,13 @@ window.onload = function () {
   // 커서 깜빡임을 담당하는 함수
   function blinkCursor() {
     const cursorElement = document.getElementById('cursor');
-    if (cursorElement.style.visibility === 'visible') {
-      cursorElement.style.visibility = 'hidden';
-    } else {
-      cursorElement.style.visibility = 'visible';
+    if (cursorElement) { // cursorElement가 존재하는지 확인합니다.
+      if (cursorElement.style.visibility === 'visible') {
+        cursorElement.style.visibility = 'hidden';
+      } else {
+        cursorElement.style.visibility = 'visible';
+      }
     }
   }
 };
+
