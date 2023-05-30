@@ -27,7 +27,15 @@
       }
 
       /* 커서 깜빡임 애니메이션 설정 */
-      @keyframes blink {
+      .cursor {
+        display: inline-block;
+        width: 2px;
+        height: 16px;
+        background-color: #000000;
+        animation: cursor-blink 1s infinite;
+      }
+
+      @keyframes cursor-blink {
         0% {
           opacity: 1;
         }
@@ -38,14 +46,7 @@
           opacity: 1;
         }
       }
-
-      .cursor {
-        display: inline-block;
-        width: 1px;
-        height: 14px;
-        background-color: #000000;
-        animation: blink 1s infinite;
-      }
+    </style>
     </style>
   </head>
   <body>
