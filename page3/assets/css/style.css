@@ -60,7 +60,7 @@
     background-position: center top;
   }
   .monitor {
-    position: absolute;
+    position: center top;
     top: 10%; /* 배경 이미지 기준으로 10% 아래에 위치 */
     left: 13%; /* 배경 이미지 기준으로 13% 오른쪽에 위치 */
     width: 74%; /* 배경 이미지의 74%의 폭 */
