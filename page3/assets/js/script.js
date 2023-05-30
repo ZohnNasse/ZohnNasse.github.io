@@ -48,7 +48,7 @@ window.onload = function () {
 
       if (window.innerWidth <= 767) {
         titleElement.style.fontSize = '12px'; // 모바일 환경에서 글자 크기를 작게 설정
-        setTimeout(showText, 150); // 모바일 환경에서 글자가 더 작으므로 간격을 늘림 (150ms)
+        setTimeout(showText, 110); // 모바일 환경에서 글자가 더 작으므로 간격을 늘림 (150ms)
       } else {
         titleElement.style.fontSize = '16px'; // 기본 글자 크기
         setTimeout(showText, 100); // 한 글자씩 표시하는 간격 (100ms)
@@ -60,7 +60,7 @@ window.onload = function () {
     }
   }
 
-  showText();
+
 
   // 커서 깜빡임을 담당하는 함수
   function blinkCursor() {
@@ -73,5 +73,6 @@ window.onload = function () {
       }
     }
   }
+  showText();
 };
 
