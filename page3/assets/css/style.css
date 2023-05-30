@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'NeodgPro';
+  src: url('../font/neodgpro.ttf') format('truetype');
+}
+
 /* 기본 컨테이너 스타일 */
 .container {
   position: relative;
@@ -29,6 +34,7 @@
   width: 74%; /* 배경 이미지의 74%의 폭 */
   height: 57%; /* 배경 이미지의 57%의 높이 */
   background-color: #ccccccc4;
+  font-family: 'NeodgPro', Arial, sans-serif;
 }
 .attribution {
   position: absolute;
@@ -43,4 +49,3 @@
 .attribution a {
   color: #999999;
 }
-
