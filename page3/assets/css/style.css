@@ -57,6 +57,6 @@
   .background {
     position: absolute;
     background-size: contain;
-    background-position: center;
+    background-position: center top;
   }
 }
