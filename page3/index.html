@@ -25,6 +25,27 @@
         padding: 4px 8px;
         border-radius: 4px;
       }
+
+      /* 커서 깜빡임 애니메이션 설정 */
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .cursor {
+        display: inline-block;
+        width: 1px;
+        height: 14px;
+        background-color: #000000;
+        animation: blink 1s infinite;
+      }
     </style>
   </head>
   <body>
@@ -44,7 +65,7 @@
           <img src="assets/images/Contact.jpg" alt="Contact" title="Contact" />
         </div>
         <div class="content">
-          <h1 id="title"></h1>
+          <h1 id="title"></h1><span class="cursor"></span>
         </div>
       </div>
     </div>
