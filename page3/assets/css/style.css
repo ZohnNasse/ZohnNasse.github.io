@@ -55,7 +55,9 @@
     width: 100%;
   }
   .background {
+    position: absolute;
     background-size: contain;
+    background-position: center;
   }
   .monitor {
     top: 5%; /* 모바일 화면에서 컨테이너가 위로 조금 이동 */
