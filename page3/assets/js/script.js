@@ -40,15 +40,25 @@ window.onload = function () {
   function showText() {
     if (index < text.length) {
       if (text[index] === '.') {
-        titleElement.innerHTML += text[index] + '<br>' // 마침표일 경우 마침표와 줄바꿈 추가
+        titleElement.innerHTML += text[index] + '<br>'; // 마침표일 경우 마침표와 줄바꿈 추가
       } else {
-        titleElement.innerHTML += text[index] // 내용 추가
+        titleElement.innerHTML += text[index]; // 내용 추가
       }
-      titleElement.style.fontSize = '16px' // 글자 크기 조정
-      index++
-      setTimeout(showText, 100) // 한 글자씩 표시하는 간격 (100ms)
+  
+      if (window.innerWidth <= 767) {
+        titleElement.style.fontSize = '12px'; // 모바일 환경에서 글자 크기를 작게 설정
+        setTimeout(showText, 150); // 모바일 환경에서 글자가 더 작으므로 간격을 늘림 (150ms)
+      } else {
+        titleElement.style.fontSize = '16px'; // 기본 글자 크기
+        setTimeout(showText, 100); // 한 글자씩 표시하는 간격 (100ms)
+      }
+  
+      index++;
+    } else {
+      // 텍스트 표시가 모두 완료된 후에도 프롬프트 커서 깜빡임을 유지하기 위한 코드
+      setInterval(blinkCursor, 500); // 0.5초 간격으로 커서 깜빡임
     }
   }
-
+  
   showText()
 }
