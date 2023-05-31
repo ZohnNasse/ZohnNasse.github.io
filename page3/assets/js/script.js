@@ -46,7 +46,7 @@ window.onload = function () {
       }
       if (window.innerWidth <= 767) {
         titleElement.style.fontSize = '10px'; // 모바일 환경에서 글자 크기를 작게 설정
-        setTimeout(showText, 150); // 모바일 환경에서 글자가 더 작으므로 간격을 늘림 (150ms)
+        setTimeout(showText, 120); // 모바일 환경에서 글자가 더 작으므로 간격을 늘림 (150ms)
       } else {
         titleElement.style.fontSize = '16px'; // 기본 글자 크기
         setTimeout(showText, 100); // 한 글자씩 표시하는 간격 (100ms)
