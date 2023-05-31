@@ -42,7 +42,7 @@ menuIcons.forEach((icon) => {
     icon.removeEventListener('click', goToHomePage); // 기존에 등록된 이벤트 리스너 제거
     icon.addEventListener('click', goToHomePage); // 새로운 이벤트 리스너 등록
   }
-});
+
 
 // project 메뉴 클릭 시 모니터 컨테이너 내용 변경
 const projectMenu = document.getElementById('project-menu');
