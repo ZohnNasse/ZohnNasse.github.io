@@ -38,6 +38,20 @@ menuIcons.forEach((icon) => {
     icon.addEventListener('click', goToHomePage); // 새로운 이벤트 리스너 등록
   }
 });
+// project 메뉴 클릭 시 모니터 컨테이너 내용 변경
+const projectMenu = document.getElementById('project-menu');
+const monitorContainer = document.querySelector('.monitor .content');
+
+projectMenu.addEventListener('click', () => {
+  // 모니터 컨테이너 내용 비우기
+  monitorContainer.innerHTML = '';
+
+  // 새로운 내용 추가
+  const projectContent = document.createElement('div');
+  projectContent.innerHTML = '<h2>프로젝트 내용</h2><p>프로젝트에 대한 설명이 여기에 작성됩니다.</p>';
+
+  monitorContainer.appendChild(projectContent);
+});
 
 window.onload = function () {
   const titleElement = document.getElementById('title');
