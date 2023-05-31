@@ -1,3 +1,8 @@
+// 홈 페이지로 이동하는 함수
+function goToHomePage() {
+  window.location.href = 'index.html'; // 홈 페이지로 이동
+}
+
 // menu-icons의 모든 이미지 요소를 선택합니다.
 const menuIcons = document.querySelectorAll('.menu-icons img');
 
@@ -26,6 +31,12 @@ menuIcons.forEach((icon) => {
       tooltip.remove(); // 툴팁을 제거합니다.
     }
   });
+
+  // 홈 메뉴 클릭 시 이벤트 핸들러
+  if (icon.getAttribute('alt') === 'Home') {
+    icon.removeEventListener('click', goToHomePage); // 기존에 등록된 이벤트 리스너 제거
+    icon.addEventListener('click', goToHomePage); // 새로운 이벤트 리스너 등록
+  }
 });
 
 window.onload = function () {
