@@ -69,4 +69,22 @@ window.onload = function () {
   adjustMenuIconSize(); // 초기 설정
 
   window.addEventListener('resize', adjustMenuIconSize); // 화면 크기 변경 시 메뉴 아이콘 크기 조정
+  window.addEventListener('resize', function() {
+    const menuIcons = document.querySelectorAll('.menu-icons img');
+  
+    // 현재 브라우저 너비를 확인하여 모바일 환경인지 판단
+    const isMobile = window.innerWidth <= 767;
+  
+    // 모바일 환경인 경우 아이콘 크기를 작게 설정, 아닌 경우는 초기 크기로 설정
+    const iconSize = isMobile ? '24px' : '32px';
+  
+    // 각 아이콘의 크기를 설정
+    menuIcons.forEach((icon) => {
+      icon.style.width = iconSize;
+      icon.style.height = iconSize;
+    });
+  });
+  
+  // 초기 로드 시에도 크기를 설정하기 위해 resize 이벤트를 발생시킴
+  window.dispatchEvent(new Event('resize'));
 };
