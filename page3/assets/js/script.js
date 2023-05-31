@@ -35,6 +35,7 @@ menuIcons.forEach((icon) => {
       tooltip.remove(); // 툴팁을 제거합니다.
     }
   });
+});
 
   // 홈 메뉴 클릭 시 이벤트 핸들러
   if (icon.getAttribute('alt') === 'Home') {
