@@ -1,5 +1,3 @@
-// script.js
-
 // menu-icons의 모든 이미지 요소를 선택합니다.
 const menuIcons = document.querySelectorAll('.menu-icons img');
 
