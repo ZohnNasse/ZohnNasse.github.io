@@ -30,10 +30,10 @@
 /* 모니터 컨테이너는 배경이미지(컴퓨터 이미지)의 모니터 안에만 존재하게 수정함*/
 .monitor {
   position: absolute;
-  top: 10%; /* 배경 이미지 기준으로 10% 아래에 위치 */
-  left: 13%; /* 배경 이미지 기준으로 13% 오른쪽에 위치 */
-  width: 74%; /* 배경 이미지의 74%의 폭 */
-  height: 57%; /* 배경 이미지의 57%의 높이 */
+  top: 7%; /* 배경 이미지 모니터에 맞춤 */
+  left: 5.5%; 
+  width: 88.5%; 
+  height: 64%; 
   background-color: #ccccccc4;
   font-family: 'NeodgPro', Arial, sans-serif;
 }
@@ -64,10 +64,10 @@
   }
   .monitor {
     position: center top;
-    top: 10%; /* 배경 이미지 기준으로 10% 아래에 위치 */
-    left: 13%; /* 배경 이미지 기준으로 13% 오른쪽에 위치 */
-    width: 74%; /* 배경 이미지의 74%의 폭 */
-    height: 57%; /* 배경 이미지의 57%의 높이 */
+    top: 7%; /* 배경 이미지 모니터에 맞춤 */
+    left: 5.5%; 
+    width: 88.5%; 
+    height: 64%; 
     background-color: #ccccccc4;
     font-family: 'NeodgPro', Arial, sans-serif;
   }
