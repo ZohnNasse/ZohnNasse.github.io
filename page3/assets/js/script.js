@@ -65,7 +65,7 @@ window.onload = function() {
     '안녕하세요. 저는 비전공으로 AI를 배우고 있는 Zohn이라고 합니다. 이곳은 ChatGPT와 함께 만드는 홈페이지입니다. 앞으로 이 페이지를 통해 쿼티 킹덤이라는 타자 게임을 런칭 할 예정입니다. 많은 관심 부탁 드립니다.';
   let index = 0;
 
-  function showText(event) {
+  function showText() {
     if (index < text.length) {
       if (text[index] === '.') {
         titleElement.innerHTML += text[index] + '<br>'; // 마침표일 경우 마침표와 줄바꿈 추가
@@ -74,16 +74,20 @@ window.onload = function() {
       }
       if (window.innerWidth <= 767) {
         titleElement.style.fontSize = '10px'; // 모바일 환경에서 글자 크기를 작게 설정
-        setTimeout(showText, 120, event); // 모바일 환경에서 글자가 더 작으므로 간격을 늘림 (150ms)
+        setTimeout(showText, 120); // 모바일 환경에서 글자가 더 작으므로 간격을 늘림 (120ms)
       } else {
         titleElement.style.fontSize = '16px'; // 기본 글자 크기
-        setTimeout(showText, 100, event); // 한 글자씩 표시하는 간격 (100ms)
+        setTimeout(showText, 100); // 한 글자씩 표시하는 간격 (100ms)
       }
       index++;
     }
   }
 
   showText();
+
+  // 홈 메뉴 클릭 시 이벤트 핸들러
+  const homeIcon = document.querySelector('.menu-icons img[alt="Home"]');
+  homeIcon.addEventListener('click', goToHomePage);
 
   // 화면 크기에 따라 메뉴 아이콘 크기 조정
   function adjustMenuIconSize() {
