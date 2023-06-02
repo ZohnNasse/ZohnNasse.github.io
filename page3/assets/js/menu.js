@@ -50,10 +50,19 @@ menuIcons.forEach((icon) => {
     }
   })
 })
+// 로드된 스크립트를 추적하기 위한 객체
+let loadedScripts = {}
 
-// 스크립트를 동적으로 로드하는 함수입니다.
 function loadScript(filename) {
+  // 이미 로드된 스크립트인지 확인
+  if (loadedScripts[filename]) {
+    return
+  }
+
   const script = document.createElement('script')
   script.src = filename
   document.body.appendChild(script)
+
+  // 스크립트를 로드한 후에 추적 객체에 추가
+  loadedScripts[filename] = true
 }
