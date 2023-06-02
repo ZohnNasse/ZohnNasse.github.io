@@ -1,6 +1,3 @@
-// menu-icons의 모든 이미지 요소를 선택합니다.
-const menuIcons = document.querySelectorAll('.menu-icons img')
-
 // 각 이미지 요소에 마우스 이벤트 리스너를 등록합니다.
 menuIcons.forEach((icon) => {
   // 마우스 진입 시 이벤트 핸들러
