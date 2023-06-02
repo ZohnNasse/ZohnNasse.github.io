@@ -1,8 +1,14 @@
+@font-face {
+  font-family: 'NeodgPro';
+  src: url('../font/neodgpro.ttf') format('truetype');
+}
+
 /* 기본 컨테이너 스타일 */
 .container {
   position: relative;
   width: 800px;
   height: 600px;
+  min-width: 280px;
   margin: 0 auto; /* 가운데 정렬 */
   background-color: #f2f2f2;
 }
@@ -14,7 +20,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/assets/images/computer3.png');
+  background-image: url('../images/computer.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -24,11 +30,12 @@
 /* 모니터 컨테이너는 배경이미지(컴퓨터 이미지)의 모니터 안에만 존재하게 수정함*/
 .monitor {
   position: absolute;
-  top: 10%; /* 배경 이미지 기준으로 10% 아래에 위치 */
-  left: 13%; /* 배경 이미지 기준으로 13% 오른쪽에 위치 */
-  width: 74%; /* 배경 이미지의 74%의 폭 */
-  height: 57%; /* 배경 이미지의 57%의 높이 */
+  top: 7%; /* 배경 이미지 모니터에 맞춤 */
+  left: 5.5%; 
+  width: 88.5%; 
+  height: 64%; 
   background-color: #ccccccc4;
+  font-family: 'NeodgPro', Arial, sans-serif;
 }
 .attribution {
   position: absolute;
@@ -42,4 +49,48 @@
 
 .attribution a {
   color: #999999;
+}
+
+.menu-icons {
+  display: flex;
+  justify-content: flex-start; /* 아이콘들을 왼쪽으로 정렬 */
+  background-color: #ffffff; /* 배경색을 흰색으로 설정 */
+}
+
+.menu-icons img {
+  width: 32px;
+  height: 32px;
+}
+ 
+/* 툴팁 스타일 설정 */
+.tooltip {
+  position: absolute;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+
+@media screen and (max-width: 767px) {
+  .container{
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+  }
+  .background {
+    position: center top;
+    background-size: contain;
+    background-position: center top;
+  }
+  .monitor {
+    position: center top;
+    top: 7%; /* 배경 이미지 모니터에 맞춤 */
+    left: 5.5%; 
+    width: 88.5%; 
+    height: 64%; 
+    background-color: #ccccccc4;
+    font-family: 'NeodgPro', Arial, sans-serif;
+  }
 }
