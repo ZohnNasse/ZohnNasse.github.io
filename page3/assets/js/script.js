@@ -20,3 +20,8 @@ window.addEventListener('resize', function (event) {
     icon.style.height = iconSize
   })
 })
+
+const images = document.querySelectorAll('img')
+images.forEach((img) => {
+  img.title = ''
+})
