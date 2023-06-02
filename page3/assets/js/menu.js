@@ -5,7 +5,6 @@ const menuIcons = document.querySelectorAll('.menu-icons img')
 menuIcons.forEach((icon) => {
   // 마우스 진입 시 이벤트 핸들러
   icon.addEventListener('mouseenter', (event) => {
-    // 이벤트 객체를 인자로 받아 사용합니다.
     const altText = icon.getAttribute('alt')
     const tooltip = document.createElement('div')
     tooltip.classList.add('tooltip')
@@ -21,9 +20,9 @@ menuIcons.forEach((icon) => {
 
   // 마우스 이탈 시 이벤트 핸들러
   icon.addEventListener('mouseleave', () => {
-    const tooltip = document.querySelector('.tooltip') // 툴팁 요소를 선택합니다.
+    const tooltip = document.querySelector('.tooltip')
     if (tooltip) {
-      tooltip.remove() // 툴팁을 제거합니다.
+      tooltip.remove()
     }
   })
 })
@@ -31,7 +30,7 @@ menuIcons.forEach((icon) => {
 // 각 이미지 요소에 클릭 이벤트 리스너를 등록합니다.
 menuIcons.forEach((icon) => {
   icon.addEventListener('click', () => {
-    const altText = icon.getAttribute('alt') // 이미지의 alt 속성값을 가져옵니다.
+    const altText = icon.getAttribute('alt')
 
     // 모니터 컨테이너의 내용을 비웁니다.
     const monitorContainer = document.querySelector('.monitor .content')
