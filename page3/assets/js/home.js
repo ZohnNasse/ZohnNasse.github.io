@@ -11,7 +11,8 @@ window.onload = function () {
       } else {
         titleElement.innerHTML += text[index] // 내용 추가
       }
-      titleElement.style.fontSize = '16px' // 글자 크기 조정
+      // 화면 너비에 따라 폰트 크기를 조정합니다.
+      titleElement.style.fontSize = window.innerWidth <= 767 ? '10px' : '16px'
       index++
       setTimeout(showText, 100) // 한 글자씩 표시하는 간격 (100ms)
     }

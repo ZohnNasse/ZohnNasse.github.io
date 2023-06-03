@@ -50,6 +50,19 @@ menuIcons.forEach((icon) => {
     }
   })
 })
+// 스크립트를 동적으로 로드하는 함수입니다.
+function loadScript(filename) {
+  // 기존에 추가된 script 태그를 제거합니다.
+  const oldScript = document.querySelector(`script[src="${filename}"]`)
+  if (oldScript) {
+    oldScript.remove()
+  }
+
+  const script = document.createElement('script')
+  script.src = filename
+  document.body.appendChild(script)
+}
+
 // 로드된 스크립트를 추적하기 위한 객체
 let loadedScripts = {}
 
