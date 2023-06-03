@@ -1,4 +1,4 @@
-window.onload = function () {
+;(function () {
   const titleElement = document.getElementById('title')
   const text =
     '안녕하세요. 저는 비전공으로 AI를 배우고 있는 Zohn이라고 합니다. 이곳은 ChatGPT와 함께 만드는 홈페이지입니다. 앞으로 이 페이지를 통해 쿼티 킹덤이라는 타자 게임을 런칭 할 예정입니다. 많은 관심 부탁 드립니다.'
@@ -19,4 +19,4 @@ window.onload = function () {
   }
 
   showText()
-}
+})()
