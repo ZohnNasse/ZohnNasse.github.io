@@ -5,6 +5,7 @@ const menuIcons = document.querySelectorAll('.menu-icons img')
 menuIcons.forEach((icon) => {
   // 마우스 진입 시 이벤트 핸들러
   icon.addEventListener('mouseenter', (event) => {
+    // 이벤트 객체를 인자로 받아 사용합니다.
     const altText = icon.getAttribute('alt')
     const tooltip = document.createElement('div')
     tooltip.classList.add('tooltip')
@@ -20,36 +21,13 @@ menuIcons.forEach((icon) => {
 
   // 마우스 이탈 시 이벤트 핸들러
   icon.addEventListener('mouseleave', () => {
-    const tooltip = document.querySelector('.tooltip')
+    const tooltip = document.querySelector('.tooltip') // 툴팁 요소를 선택합니다.
     if (tooltip) {
-      tooltip.remove()
+      tooltip.remove() // 툴팁을 제거합니다.
     }
   })
 })
 
-// 각 이미지 요소에 클릭 이벤트 리스너를 등록합니다.
-menuIcons.forEach((icon) => {
-  icon.addEventListener('click', () => {
-    const altText = icon.getAttribute('alt')
-
-    // 모니터 컨테이너의 내용을 비웁니다.
-    const monitorContainer = document.querySelector('.monitor .content')
-    monitorContainer.innerHTML = ''
-
-    // alt 속성값에 따라 해당하는 스크립트를 로드합니다.
-    switch (altText) {
-      case 'Home':
-        loadScript('home.js')
-        break
-      case 'Project':
-        loadScript('project.js')
-        break
-      case 'Contact':
-        loadScript('contact.js')
-        break
-    }
-  })
-})
 let loadedScripts = {}
 
 function loadScript(filename) {
@@ -71,3 +49,27 @@ function loadScript(filename) {
   // 스크립트를 로드한 후에 추적 객체에 추가
   loadedScripts[filename] = true
 }
+
+// 각 이미지 요소에 클릭 이벤트 리스너를 등록합니다.
+menuIcons.forEach((icon) => {
+  icon.addEventListener('click', () => {
+    const altText = icon.getAttribute('alt') // 이미지의 alt 속성값을 가져옵니다.
+
+    // 모니터 컨테이너의 내용을 비웁니다.
+    const monitorContainer = document.querySelector('.monitor .content')
+    monitorContainer.innerHTML = ''
+
+    // alt 속성값에 따라 해당하는 스크립트를 로드합니다.
+    switch (altText) {
+      case 'Home':
+        loadScript('home.js')
+        break
+      case 'Project':
+        loadScript('project.js')
+        break
+      case 'Contact':
+        loadScript('contact.js')
+        break
+    }
+  })
+})
