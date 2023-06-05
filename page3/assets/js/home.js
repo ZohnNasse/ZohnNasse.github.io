@@ -19,4 +19,15 @@
   }
 
   showText()
+
+  // 출처 표시 부분 추가
+  const attribution = document.createElement('div')
+  attribution.innerHTML = `
+    <p>
+      Icons made by <a href="http://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a> from
+      <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">www.flaticon.com</a>
+    </p>
+  `
+  const contentElement = document.querySelector('.content')
+  contentElement.appendChild(attribution)
 })()
