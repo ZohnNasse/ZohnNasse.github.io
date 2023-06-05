@@ -31,11 +31,6 @@ menuIcons.forEach((icon) => {
 let loadedScripts = {}
 
 function loadScript(filename) {
-  // 이미 로드된 스크립트인지 확인
-  if (loadedScripts[filename]) {
-    return
-  }
-
   // 기존에 추가된 script 태그를 제거합니다.
   const oldScript = document.querySelector(`script[src="${filename}"]`)
   if (oldScript) {
@@ -45,7 +40,7 @@ function loadScript(filename) {
   const script = document.createElement('script')
   script.src = './assets/js/' + filename // 상대 경로를 사용하여 파일 위치 지정
   script.onload = function () {
-    loadedScripts[filename] = true // 스크립트가 성공적으로 로드되면 추적 객체에 추가
+    console.log(`"${filename}" successfully loaded.`) // 스크립트가 성공적으로 로드되면 로그 메시지 출력
   }
   script.onerror = function () {
     console.error(`"${filename}" failed to load.`) // 스크립트 로드 실패 시 오류 메시지 출력
@@ -64,9 +59,20 @@ menuIcons.forEach((icon) => {
 
     // alt 속성값에 따라 해당하는 스크립트를 로드합니다.
     switch (altText) {
+      // menu.js
       case 'Home':
+        // 'title' id를 가진 요소 생성
+        const titleElement = document.createElement('h1')
+        titleElement.id = 'title'
+
+        // 생성한 요소를 .content 클래스를 가진 요소에 추가
+        const contentElement = document.querySelector('.content')
+        contentElement.appendChild(titleElement)
+
+        // 이제 home.js를 로드
         loadScript('home.js')
         break
+
       case 'Project':
         loadScript('project.js')
         break

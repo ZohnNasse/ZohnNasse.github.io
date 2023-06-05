@@ -3,11 +3,11 @@
   const contactInfo = document.createElement('div')
 
   const email = document.createElement('p')
-  email.textContent = 'Email: your-email@example.com'
+  email.innerHTML = 'Email: <a href="mailto:zohnForAI@gmail.com">zohnForAI@gmail.com</a>'
   contactInfo.appendChild(email)
 
   const instagram = document.createElement('p')
-  instagram.textContent = 'Instagram: @your_instagram'
+  instagram.innerHTML = 'Instagram: <a href="https://www.instagram.com/k12j34/" target="_blank">https://www.instagram.com/k12j34/</a>'
   contactInfo.appendChild(instagram)
 
   monitorContainer.appendChild(contactInfo)
