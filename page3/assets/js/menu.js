@@ -43,7 +43,7 @@ function loadScript(filename) {
   }
 
   const script = document.createElement('script')
-  script.src = filename
+  script.src = '/assets/js/' + filename
   document.body.appendChild(script)
 
   // 스크립트를 로드한 후에 추적 객체에 추가
