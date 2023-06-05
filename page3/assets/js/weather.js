@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html>
-<body>
+;(function () {
+  const monitorContainer = document.querySelector('.monitor .content')
+  const contactInfo = document.createElement('div')
 
-<h1 id="myHeading">준비중</h1>
+  const email = document.createElement('p')
+  email.innerHTML = 'Email: <a href="mailto:zohnForAI@gmail.com">zohnForAI@gmail.com</a>'
+  contactInfo.appendChild(email)
 
-<script>
-document.getElementById("myHeading").innerHTML = "Hello World!";
-</script>
+  const instagram = document.createElement('p')
+  instagram.innerHTML = 'Instagram: <a href="https://www.instagram.com/k12j34/" target="_blank">https://www.instagram.com/k12j34/</a>'
+  contactInfo.appendChild(instagram)
 
-</body>
-</html>
+  monitorContainer.appendChild(contactInfo)
+})()
