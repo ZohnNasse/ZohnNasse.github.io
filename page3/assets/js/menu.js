@@ -43,11 +43,14 @@ function loadScript(filename) {
   }
 
   const script = document.createElement('script')
-  script.src = '/assets/js/' + filename
+  script.src = './assets/js/' + filename // 상대 경로를 사용하여 파일 위치 지정
+  script.onload = function () {
+    loadedScripts[filename] = true // 스크립트가 성공적으로 로드되면 추적 객체에 추가
+  }
+  script.onerror = function () {
+    console.error(`"${filename}" failed to load.`) // 스크립트 로드 실패 시 오류 메시지 출력
+  }
   document.body.appendChild(script)
-
-  // 스크립트를 로드한 후에 추적 객체에 추가
-  loadedScripts[filename] = true
 }
 
 // 각 이미지 요소에 클릭 이벤트 리스너를 등록합니다.
